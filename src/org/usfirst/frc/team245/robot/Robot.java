@@ -7,6 +7,8 @@
 
 package org.usfirst.frc.team245.robot;
 
+import com.github.adambots.powerup2018.drive.Drive;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -82,5 +84,10 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void testPeriodic() {
+		Drive.drive(Gamepad.primary.getLeftY(), Gamepad.primary.getRightX(), Gamepad.primary.getLeftX());
+		
 	}
+	
+	
+	
 }

@@ -1,5 +1,7 @@
 package org.usfirst.frc.team245.robot;
 
+// import com.github.adambots.powerup2018.drive.LeftY;
+
 import edu.wpi.first.wpilibj.Joystick;
 
 public class Gamepad {
@@ -69,7 +71,10 @@ public class Gamepad {
 	 * XBOX 360 Right Vertical Axis (Up=-1, Down=1)
 	 */
 	private static final int AXIS_RIGHT_Y = 5;
+	
 	private static final int AXIS_DPAD_HORIZONTAL = 6;
+	private static final int AXIS_DPAD_VERTICAL = 7;
+	
 	//// Control Instances
 	public static Gamepad primary = new Gamepad(PRIMARY_DRIVER);
 	public static Gamepad secondary = new Gamepad(SECONDARY_DRIVER);
@@ -100,7 +105,7 @@ public class Gamepad {
 	public boolean getDPadRight() {
 		return joy.getRawAxis(AXIS_DPAD_HORIZONTAL) > 0.5;
 	}
-
+	
 	/**
 	 * Corresponds to HORIZONTAL input on the LEFT joystick.
 	 *
