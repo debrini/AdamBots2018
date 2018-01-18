@@ -11,11 +11,11 @@ public class Actuators {
 	private static VictorSP rightFrontDriveMotor;
 	private static VictorSP rightRearDriveMotor;
 	
-	public static void init(){
-		VictorSP leftFrontDriveMotor = new VictorSP(0);
-		VictorSP leftRearDriveMotor = new VictorSP(1);
-		VictorSP rightFrontDriveMotor = new VictorSP(2);
-		VictorSP rightRearDriveMotor = new VictorSP(3);
+	public static void init() {
+		VictorSP leftFrontDriveMotor = new VictorSP(Constants.LEFT_FRONT_DRIVE_MOTOR_PORT);
+		VictorSP leftRearDriveMotor = new VictorSP(Constants.LEFT_REAR_DRIVE_MOTOR_PORT);
+		VictorSP rightFrontDriveMotor = new VictorSP(Constants.RIGHT_FRONT_DRIVE_MOTOR_PORT);
+		VictorSP rightRearDriveMotor = new VictorSP(Constants.RIGHT_REAR_DRIVE_MOTOR_PORT);
 	}
 	public static VictorSP getLeftFrontDriveMotor() {
 		return leftFrontDriveMotor;
