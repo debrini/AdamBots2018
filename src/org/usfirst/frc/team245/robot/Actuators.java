@@ -1,32 +1,32 @@
 package org.usfirst.frc.team245.robot;
 
-import edu.wpi.first.wpilibj.VictorSP;
+import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.Solenoid;
 import org.usfirst.frc.team245.robot.Constants;
 
 public class Actuators {
 
-	private static VictorSP leftFrontDriveMotor;
-	private static VictorSP leftRearDriveMotor;
-	private static VictorSP rightFrontDriveMotor;
-	private static VictorSP rightRearDriveMotor;
+	private static CANTalon leftFrontDriveMotor;
+	private static CANTalon leftRearDriveMotor;
+	private static CANTalon rightFrontDriveMotor;
+	private static CANTalon rightRearDriveMotor;
 	
 	public static void init() {
-		VictorSP leftFrontDriveMotor = new VictorSP(Constants.LEFT_FRONT_DRIVE_MOTOR_PORT);
-		VictorSP leftRearDriveMotor = new VictorSP(Constants.LEFT_REAR_DRIVE_MOTOR_PORT);
-		VictorSP rightFrontDriveMotor = new VictorSP(Constants.RIGHT_FRONT_DRIVE_MOTOR_PORT);
-		VictorSP rightRearDriveMotor = new VictorSP(Constants.RIGHT_REAR_DRIVE_MOTOR_PORT);
+		CANTalon leftFrontDriveMotor = new CANTalon(Constants.LEFT_FRONT_DRIVE_MOTOR_PORT);
+		CANTalon leftRearDriveMotor = new CANTalon(Constants.LEFT_REAR_DRIVE_MOTOR_PORT);
+		CANTalon rightFrontDriveMotor = new CANTalon(Constants.RIGHT_FRONT_DRIVE_MOTOR_PORT);
+		CANTalon rightRearDriveMotor = new CANTalon(Constants.RIGHT_REAR_DRIVE_MOTOR_PORT);
 	}
-	public static VictorSP getLeftFrontDriveMotor() {
+	public static CANTalon getLeftFrontDriveMotor() {
 		return leftFrontDriveMotor;
 	}
-	public static VictorSP getLeftRearDriveMotor() {
+	public static CANTalon getLeftRearDriveMotor() {
 		return leftRearDriveMotor;
 	}
-	public static VictorSP getRightFrontDriveMotor() {
+	public static CANTalon getRightFrontDriveMotor() {
 		return rightFrontDriveMotor;
 	}
-	public static VictorSP getRightRearDriveMotor() {
+	public static CANTalon getRightRearDriveMotor() {
 		return rightRearDriveMotor;
 	}
 }
