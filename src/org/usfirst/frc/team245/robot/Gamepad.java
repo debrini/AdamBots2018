@@ -176,4 +176,12 @@ public class Gamepad {
 	public boolean getBack() {
 		return joy.getRawButton(BUTTON_BACK);
 	}
+	
+	public boolean getLT() {
+		return joy.getRawButton(LEFT_AXIS_TRIGGERS);
+	}
+	
+	public boolean getRT() {
+		return joy.getRawButton(RIGHT_AXIS_TRIGGERS);
+	}
 }

@@ -1,6 +1,7 @@
 package org.usfirst.frc.team245.robot;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+import edu.wpi.first.wpilibj.VictorSP;
 
 public class Actuators {
 
@@ -9,8 +10,11 @@ public class Actuators {
 	private static WPI_TalonSRX rightRearMotor;
 	private static WPI_TalonSRX leftFrontMotor;
 	private static WPI_TalonSRX leftRearMotor;
+	
+	private static VictorSP leftArmWheel;
+	private static VictorSP rightArmWheel;
 
-	// initialzies all actuators
+	// initializes all actuators
 	public static void init() {
 
 		// initialize Talons
@@ -24,6 +28,10 @@ public class Actuators {
 		rightRearMotor.setInverted(Constants.RIGHT_REAR_DRIVE_MOTOR_INVERTED);
 		leftFrontMotor.setInverted(Constants.LEFT_FRONT_DRIVE_MOTOR_INVERTED);
 		leftRearMotor.setInverted(Constants.LEFT_REAR_DRIVE_MOTOR_INVERTED);
+		
+		// initialize VictorSP
+		leftArmWheel = new VictorSP(Constants.LEFT_FLYWHEEL_PORT);
+		rightArmWheel = new VictorSP(Constants.RIGHT_FLYWHEEL_PORT);
 
 	}
 
@@ -43,4 +51,11 @@ public class Actuators {
 		return leftRearMotor;
 	}
 
+	public static VictorSP getLeftArmWheel() {
+		return leftArmWheel;
+	}
+	
+	public static VictorSP getRightArmWheel() {
+		return rightArmWheel;
+	}
 }
