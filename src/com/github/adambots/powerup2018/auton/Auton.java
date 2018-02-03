@@ -15,7 +15,6 @@ public class Auton {
 	
 	public static void CrossBaseline() {
 		
-		// TODO: set delay and time limits
 		Actuators.getLeftFrontMotor().set(ControlMode.PercentOutput, 50);
 		Actuators.getRightFrontMotor().set(ControlMode.PercentOutput, 50);
 		Actuators.getLeftRearMotor().set(ControlMode.PercentOutput, 50);
